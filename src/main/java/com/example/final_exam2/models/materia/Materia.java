@@ -1,8 +1,8 @@
 package com.example.final_exam2.models.materia;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.final_exam2.models.docente.Docente;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,4 +21,8 @@ public class Materia {
     private String mNome;
     private String descrizione;
     int oreMateria;
+
+    @ManyToOne
+    @JoinColumn(name = "id_docente", referencedColumnName = "idDocente")
+    private Docente docente;
 }

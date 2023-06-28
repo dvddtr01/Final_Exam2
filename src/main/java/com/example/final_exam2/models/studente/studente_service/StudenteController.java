@@ -45,5 +45,4 @@ StudenteController {
         studenteService.deleteStudente(id);
     }
 
-
 }
