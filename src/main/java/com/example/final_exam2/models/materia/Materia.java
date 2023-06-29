@@ -22,7 +22,4 @@ public class Materia {
     private String descrizione;
     int oreMateria;
 
-    @ManyToOne
-    @JoinColumn(name = "id_docente", referencedColumnName = "idDocente")
-    private Docente docente;
 }

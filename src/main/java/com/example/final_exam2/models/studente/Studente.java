@@ -1,7 +1,9 @@
 package com.example.final_exam2.models.studente;
 
 import com.example.final_exam2.models.corso.Corso;
+import com.example.final_exam2.models.materia.Materia;
 import com.example.final_exam2.models.registro.Registro;
+import com.example.final_exam2.models.voto.Voto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,11 +28,11 @@ public class Studente {
     private String stCognome;
     private String dataDiNascita;
     private String stTitoloDiStudio;
+    private int oreAssenza;
 
-    @OneToOne
-    private Corso corso;
-    @OneToOne
-    private Registro registro;
+    @OneToMany
+    private List<Voto> voti;
+
 }
 
 

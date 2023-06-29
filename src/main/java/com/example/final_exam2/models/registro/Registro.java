@@ -3,10 +3,7 @@ package com.example.final_exam2.models.registro;
 import com.example.final_exam2.models.docente.Docente;
 import com.example.final_exam2.models.materia.Materia;
 import com.example.final_exam2.models.studente.Studente;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,15 +21,11 @@ public class Registro {
     @Id
     @GeneratedValue
     private long idRegistro;
-    //idStudente, idMateria, idDocente;
-    private int voto;
-    private String dataModifica;
-    private int assenze;
-    @OneToMany
-    private List<Studente> studenti;
-    @OneToMany
-    private List<Materia> materie;
+    private String ultimaModifica;
+
     @OneToMany
     private List<Docente> docenti;
 
+    @OneToMany
+    private List<Studente> studenti;
 }

@@ -1,4 +1,4 @@
-package com.example.final_exam2.models.studente.studente_service;
+package com.example.final_exam2.models.studente;
 
 import com.example.final_exam2.models.studente.Studente;
 import com.example.final_exam2.models.studente.studente_service.StudenteService;

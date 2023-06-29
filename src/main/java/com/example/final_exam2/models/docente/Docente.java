@@ -25,8 +25,7 @@ public class Docente {
     private String dcNome;
     private String dcCognome;
     private String dcTitoloDiStudio;
-    @Transient
+
+    @ManyToMany
     private List<Materia> materie;
-
-
 }

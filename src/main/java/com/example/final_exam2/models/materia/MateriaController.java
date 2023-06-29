@@ -1,6 +1,7 @@
-package com.example.final_exam2.models.materia.materia_service;
+package com.example.final_exam2.models.materia;
 
 import com.example.final_exam2.models.materia.Materia;
+import com.example.final_exam2.models.materia.materia_service.MateriaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;

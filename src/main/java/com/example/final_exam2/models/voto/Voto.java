@@ -1,7 +1,7 @@
-package com.example.final_exam2.models.corso;
+package com.example.final_exam2.models.voto;
 
 import com.example.final_exam2.models.docente.Docente;
-import com.example.final_exam2.models.registro.Registro;
+import com.example.final_exam2.models.materia.Materia;
 import com.example.final_exam2.models.studente.Studente;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,16 +16,16 @@ import java.util.List;
 @NoArgsConstructor  //costruttore vuoto
 @AllArgsConstructor //costruttore con tutti i parametri
 @Entity //dice al compilatore che questa classe è una tabella
-public class Corso {
+public class Voto {
 
     @Id
     @GeneratedValue
-    private long idCorso;
-    private String nomeCorso;
-    private String specializzazione;
-    private String annoAccademico;
+    private long idVoto;
+    private int valore;
 
-    @OneToOne
-    private Registro registro;
+    @ManyToMany
+    private List<Materia> materie;
+
+
 
 }

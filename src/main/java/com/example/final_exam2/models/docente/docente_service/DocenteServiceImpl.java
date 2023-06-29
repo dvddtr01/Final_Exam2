@@ -42,9 +42,7 @@ public class DocenteServiceImpl implements DocenteService {
 
     @Override
     public Docente getDocente(Long id) {
-        Docente docente = docenteRepository.findById(id).orElseThrow();
-        List<Materia> materie = materiaRepository.getMateriaByDocente(docente.getIdDocente());
-        docente.setMaterie(materie);
-        return docente;
+            return docenteRepository.findById(id).orElseThrow();
+        }
     }
-}
+
